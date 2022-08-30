@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    background-image: url("../assets/img/china.jpg");
+    background-size: cover;
+}
+
+header .navbar {
+
+    background-color: transparent !important;
+
+
+}
+
+ul {
+    color: yellow;
+}
+
+li a {
+
+    text-shadow: 0 0 2em white;
+}
+
+h1 {
+    color: tomato;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.card {
+    background: rgb(27, 2, 2);
+    border: 1px solid #dd2476;
+    color: rgba(59, 2, 2, 0.8);
+    margin-bottom: 2rem;
+}
+
+.card .animate__bounce {
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.card .img__tienda {
+    object-fit: contain;
+    margin-top: 5px;
+    height: 190px;
+    width: 100%;
+}
+
+
+.card .img_rank {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.card h4 {
+    font-size: 18px;
+}
+
+.card .card-body h5 {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: #030100;
+}
+
+.card div {
+    text-align: center;
+}
+
+.card div .boton {
+    text-align: center;
+}
+
+.card div p {
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.card div .oferta__ {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: #0496f1;
+}
+
+.card:hover {
+    transition: border .2s;
+    border: solid #9900ec 1px;
+    cursor: pointer;
+}
+
+.card__dest:hover {
+    transition: border .3s;
+    border: solid #f80101 1px;
+}
