@@ -19,20 +19,32 @@ header .navbar {
 
 }
 
-ul {
-    color: yellow;
+.navbar-brand{
+
+    font-family: 'Lobster', cursive;
+    color: tomato !important;
+    text-decoration: none;
+
+    
 }
 
-li a {
+ul .nav-link {
 
-    text-shadow: 0 0 2em white;
-}
+    
+    color: tomato;
+    font-family: 'Lobster', cursive;}
+
+
 
 h1 {
     color: tomato;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lobster', cursive;
 
+}
+
+ div .__boton{
+    font-family: 'Lobster', cursive;
 }
 
 
@@ -75,7 +87,7 @@ h1 {
 }
 
 .card .card-body h5 {
-    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: 'Lobster', cursive;
     color: #030100;
 }
 
@@ -88,11 +100,11 @@ h1 {
 }
 
 .card div p {
-    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: 'Lobster', cursive;
 }
 
 .card div .oferta__ {
-    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: 'Lobster', cursive;
     color: #0496f1;
 }
 
@@ -104,5 +116,5 @@ h1 {
 
 .card__dest:hover {
     transition: border .3s;
-    border: solid #f80101 1px;
+    border: solid #9900ec 1px;
 }

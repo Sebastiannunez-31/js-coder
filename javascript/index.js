@@ -80,6 +80,7 @@ function viaje(costo = Number) {
     }
 
 
+    //*FUNCION PAGAR
     function pagar() {
 
         let pagar = prompt("desea pagar ahora? \n si \n no")
@@ -105,15 +106,103 @@ function viaje(costo = Number) {
     }
 }
 
+
+class paises {
+    constructor(hotel, tipoDeAlojamiento, precio) {
+
+        this.hotel = hotel;
+        this.tipoDealojamiento = tipoDeAlojamiento
+        this.precio = precio
+
+    }
+}
+
+const viajes = [
+    { id: 1, hotel1: "rickelton", tipoDeAlojamiento: "habitacion matrimonial", precio: 198000 },
+    { id: 2, hotel1: "rickelton", tipoDeAlojamiento: "habitacion normal", precio: 78990 },
+    { id: 3, hotel1: "rickelton", tipoDeAlojamiento: "penthouse", precio: 1990654 },
+
+
+];
+
+function hoteles() {
+
+
+    let hotel = Number(prompt("En que hotel le gustaria alojarse?\n 1 - Rickelton \n 2 - Victorious"))
+    //?revisar para agregar un foreach para utilizar un solo if
+    if (hotel === 1) {
+        let alojarse = Number(prompt("que tipo de alojamiento le gustaria? \n 1 -  Habitacion matrimonial \n 2 - Habitacion normal \n 3 - Penthouse"))
+
+        if (alojarse === 1) {
+            let alojamiento = viajes.find(item => item.id === alojarse)
+
+            let mensaje = `
+            id: ${alojamiento.id},
+            hotel: ${alojamiento.hotel1},
+            tipo de alojamiento: ${alojamiento.tipoDeAlojamiento},
+            precio $${alojamiento.precio}
+            `
+            alert(`tu viaje sera con estas condiciones ${mensaje}`)
+
+        }
+        else if (alojarse === 2) {
+            let alojamiento = viajes.find(item => item.id === alojarse)
+    
+            let mensaje = `
+            id: ${alojamiento.id},
+            hotel: ${alojamiento.hotel1},
+            tipo de alojamiento: ${alojamiento.tipoDeAlojamiento},
+            precio $${alojamiento.precio}
+            `
+            alert(`tu viaje sera con estas condiciones ${mensaje}`)
+    
+        }
+        else if (alojarse === 3) {
+            let alojamiento = viajes.find(item => item.id === alojarse)
+    
+            let mensaje = `
+            id: ${alojamiento.id},
+            hotel: ${alojamiento.hotel1},
+            tipo de alojamiento: ${alojamiento.tipoDeAlojamiento},
+            precio $${alojamiento.precio}
+            `
+            alert(`tu viaje sera con estas condiciones ${mensaje}`)
+    
+        }
+        else if (alojarse === undefined) {
+    
+            alert("tipo de alojamiento no existe")
+    
+        }
+    
+
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 let pais = prompt("Que pais te gustaria visitar? \n Moscu - Plaza roja \n Nueva Zelanda \n Croacia \n escribe esc para salir").toLocaleLowerCase();
 
 while (pais != "esc") {
 
+
+
     switch (pais) {
+
         case "moscu":
 
+            hoteles();
+
             viaje(12000);
-            break
+            break;
         case "nueva zelanda":
 
             viaje(28990)
