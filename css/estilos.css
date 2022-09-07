@@ -28,14 +28,28 @@ header .navbar {
     
 }
 
+img{
+    height: 60px;
+    width: 200px;
+}
+
+
+
 ul .nav-link {
 
     
     color: tomato;
     font-family: 'Lobster', cursive;}
 
+    
+.active a:hover{
+    
+    color: #05d7b4;
+    
+}
 
 
+ 
 h1 {
     color: tomato;
     text-align: center;
@@ -45,6 +59,27 @@ h1 {
 
  div .__boton{
     font-family: 'Lobster', cursive;
+}
+
+footer{
+   
+    background-color: rgb(157, 26, 3);
+
+
+}
+
+footer div h5{
+    font-family: 'Lobster', cursive;  
+    color: tomato    ;
+}
+p{
+    color: tomato;
+    font-family: 'Lobster', cursive;   
+}
+ 
+li a{
+    text-decoration: none   ;
+    font-family: 'Lobster', cursive;  
 }
 
 

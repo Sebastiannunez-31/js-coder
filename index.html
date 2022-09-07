@@ -9,16 +9,17 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Kdam+Thmor+Pro&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Kdam+Thmor+Pro&family=Lobster&display=swap"
+    rel="stylesheet">
 
-  <title>Document</title>
+  <title>Viajes Paradise</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
         <a class="navbar-brand">Viajes Paradise </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -27,15 +28,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Hoteles</a>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="../../index.html">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tours</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="./assets/pages/hoteles.html">Hoteles</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">opiniones
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Tours
               </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Carrito
+              </a>
+
+
             </li>
           </ul>
         </div>
@@ -44,77 +53,32 @@
   </header>
 
 
-  <h1>Cotiza tu viaje con nosotros</h1>
-  <section class="container-fluid section__tienda">
 
-    <section>
-      <div class="  animate__animated animate__fadeInUp imagenes__tienda">
+  <!--CARRITO DE COMPRAS  -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <div>
+        Carrito de compras por terminar
 
-        <div class="container mx-auto mt-4 contenedor">
-          <div class="row">
-            <!-- 1 -->
-            <div class="col-md-4">
-              <div class="card card__dest">
-                <img src="assets/img/plaza-roja-moscu__1280x720.png" class="card-img-top img__tienda  animate__bounce"
-                  alt="kit superacion raldheim">
-                <div class="card-body">
-                  <h5 class="card-title">Tour Plaza roja</h5>
-                  <p class="oferta__">$ 12.000 - <i>Oferta</i></p>
-                  <div>
-                    <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="col-md-4">
-              <div class="card">
-                <img src="assets/img/Wellington-Harbour-New-Zealand.webp" class="card-img-top img__tienda"
-                  alt="kit innistrad master">
-                <div class="card-body">
-                  <h5 class="card-title">Tour Nueva Zelanda</h5>
-                  <p>$ 28.990</p>
-                  <div>
-                    <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="col-md-4">
-              <div class="card">
-                <img src="assets/img/croacia-du.jpg" class="card-img-top img__tienda" alt="kit forgotten master">
-                <div class="card-body">
-                  <h5 class="card-title">Tour Croacia</h5>
-                  <p>$ 48.990</p>
-                  <div>
-                    <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
       </div>
-    </section>
-  </section>
+     
+  </div>
+</div>
 
-  <footer>
-    <h1>
 
-      footer
 
-    </h1>
-  </footer>
-  <!-- <script src="javascript/index.js"></script> -->
-  <!-- JavaScript Bundle with Popper -->
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-  <script src="javascript/index.js"></script>
 </body>
 
 </html>

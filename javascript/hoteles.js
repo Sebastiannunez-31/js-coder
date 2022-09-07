@@ -169,7 +169,7 @@ function hoteles() {
             alert(`tu viaje sera con estas condiciones ${mensaje}`)
     
         }
-        else if (alojarse === undefined) {
+        else {
     
             alert("tipo de alojamiento no existe")
     
@@ -204,11 +204,12 @@ while (pais != "esc") {
             viaje(12000);
             break;
         case "nueva zelanda":
-
+            hoteles();
             viaje(28990)
             break;
 
         case "croacia":
+            hoteles();
             viaje(48990)
             break;
 
