@@ -55,150 +55,60 @@
 
 
 
-    <h1>Cotiza tu viaje con nosotros</h1>
-    <section class="container-fluid section__tienda">
 
-        <section>
-            <div class="  animate__animated animate__fadeInUp imagenes__tienda">
 
-                <div class="container mx-auto mt-4 contenedor">
-                    <div class="row">
-                        <!-- 1 -->
-                        <div class="col-md-4">
-                            <div class="card card__dest">
-                                <img src="../../assets/img/plaza-roja-moscu__1280x720.png"
-                                    class="card-img-top img__tienda  animate__bounce" alt="kit superacion raldheim">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tour Plaza roja</h5>
-                                    <p class="oferta__">$ 12.000 - <i>Oferta</i></p>
-                                    <div>
-                                        <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
+    <div class="container">
+        <h1>Selecciona tu destino</h1>
+        <hr>
+        <div class="row" id="items"></div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2 -->
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="../../assets/img/Wellington-Harbour-New-Zealand.webp"
-                                    class="card-img-top img__tienda" alt="kit innistrad master">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tour Nueva Zelanda</h5>
-                                    <p>$ 28.990</p>
-                                    <div>
-                                        <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3 -->
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="../../assets/img/croacia-du.jpg" class="card-img-top img__tienda"
-                                    alt="kit forgotten master">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tour Croacia</h5>
-                                    <p>$ 48.990</p>
-                                    <div>
-                                        <span class="btn btn-danger __boton col-md-6 ">Agregar al carro</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
+
+    </div>
+
+    
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <button class="btn btn-dark">Comprar</button>
             </div>
+          </div>
+        </div>
+      </template>
 
 
-            <!--CARRITO DE COMPRAS  -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de compras</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div>
-                        Carrito de compras por terminar
 
-                    </div>
-
-                </div>
+        <!--   <--CARRITO DE COMPRAS  --> 
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-        </section>
+            <div class="offcanvas-body">
+                <div>
+                    Carrito de compras por terminar
 
-    </section>
-
-    <footer>
-        <footer class="text-center text-lg-start">
-            <!-- Grid container -->
-            <div class="container">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class=" grid__column col-lg-3 col-md-6 mb-4 mb-md-0 ">
-
-                        <div class="footer__img d-flex align-items-center justify-content-center mb-4 mx-auto">
-                            <img class="__img" src="../../assets/img/viajesparadise.png" />
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-4">Politicas</h5>
-
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <a href="#!" class="text-white">Privacidad y cookies</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#!" class="text-white">Terminos y condiciones</a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer__menu1">
-                        <h5 class="text-uppercase mb-4">Categoria popular</h5>
-
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <a href="">FAQ</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="./assets/pages/blog.html"></i>Blog</a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-4">Contacto</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <p> Av. El alba de lotus 877, Santiago</p>
-                            </li>
-                            <li>
-                                <p>+ 56 922 547 88</p>
-                            </li>
-                            <li>
-                                <p>contacto@paradisetravels.cl</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-center footer__derechos">
-                        © 2022 Copyright Viajes Paradise <i>Diseñado con amor por DevForDummies &#128154</i>
-                    </div>
                 </div>
 
-                <!-- JavaScript Bundle with Popper -->
-               
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-                    crossorigin="anonymous"></script>
+            </div>
+        </div>
+    
+    </section> 
+  
+ 
 
 
-                <script src="../../javascript/hoteles.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+    <script src="../../javascript/hoteles.js"></script>
 </body>

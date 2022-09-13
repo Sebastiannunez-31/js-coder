@@ -28,10 +28,6 @@ header .navbar {
     
 }
 
-img{
-    height: 60px;
-    width: 200px;
-}
 
 
 
@@ -84,18 +80,11 @@ li a{
 
 
 
-.card {
-    background: rgb(27, 2, 2);
-    border: 1px solid #dd2476;
-    color: rgba(59, 2, 2, 0.8);
-    margin-bottom: 2rem;
+.card{
+    
+ 
 }
 
-.card .animate__bounce {
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-}
 
 .card .img__tienda {
     object-fit: contain;
@@ -105,17 +94,7 @@ li a{
 }
 
 
-.card .img_rank {
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-}
 
-.card h3 {
-    margin-top: 30px;
-    font-size: 25px;
-}
 
 .card h4 {
     font-size: 18px;
@@ -138,18 +117,5 @@ li a{
     font-family: 'Lobster', cursive;
 }
 
-.card div .oferta__ {
-    font-family: 'Lobster', cursive;
-    color: #0496f1;
-}
 
-.card:hover {
-    transition: border .2s;
-    border: solid #9900ec 1px;
-    cursor: pointer;
-}
 
-.card__dest:hover {
-    transition: border .3s;
-    border: solid #9900ec 1px;
-}
