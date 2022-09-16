@@ -75,4 +75,6 @@ const setCarrito = objeto => {
     //* se accede a la informacion de carrito y se copia
 
     console.log(carrito)
+
+    alert(`has agregado ${JSON.stringify(carrito)}`)
 }
