@@ -8,7 +8,8 @@
 
 body {
 
-    background-image: url("../assets/img/china.jpg");
+    background-color: bisque !important;
+    
     background-size: cover;
 }
 
@@ -80,10 +81,7 @@ li a{
 
 
 
-.card{
-    
- 
-}
+
 
 
 .card .img__tienda {
