@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 cards.addEventListener('click', e => {
 
     addCarrito(e)
+
+    //*intentar aqui la notificacion de la libreria para confirmacion en el carrito
 })
 
 const fetchData = async () => {
@@ -56,6 +58,8 @@ const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {//*target que detecta el boton- devuelve un valor true si se preciona en la clase indicada(boton)
         //  console.log(e.target.parentElement)//*empuja el contenido completo del div card al carrito
         setCarrito(e.target.parentElement)
+        //*alert de producto agregado
+
     }
     e.stopPropagation()//* evita que el evento se propague a las demas etiquetas del html(si se hace click en precio u otro)
 }
@@ -78,6 +82,23 @@ const setCarrito = objeto => {
     carrito[producto.id] = { ...producto }//*spread operations - buscar mas informacion 
     //* se accede a la informacion de carrito y se copia
 
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-start',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    Toast.fire({
+        icon: 'success',
+        title: `Has agregado ${producto.tittle} al carrito`
+    })
     pintarCarrito()
 
 
@@ -100,31 +121,31 @@ const pintarCarrito = () => {
 
         fragment.appendChild(clone)
 
-       
+
     })
-   
+
     items.appendChild(fragment)
-    
+
     pintarCanvas()
-   
+
 }
 
-const pintarCanvas = () => {
+const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad y el detalle de este
 
     footer.innerHTML = ''
 
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
-       
+
     }
 
     const totalQuantity = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
-    const totalPrice = Object.values(carrito).reduce((acc,{cantidad, precio}) => acc + cantidad * precio, 0)
-    
-    templateCanvas.querySelectorAll('td')[0].textContent=totalQuantity
-    templateCanvas.querySelector('span').textContent=totalPrice
+    const totalPrice = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
 
-    const clone= templateCanvas.cloneNode(true)
+    templateCanvas.querySelectorAll('td')[0].textContent = totalQuantity
+    templateCanvas.querySelector('span').textContent = totalPrice
+
+    const clone = templateCanvas.cloneNode(true)
 
     fragment.appendChild(clone)
     footer.appendChild(fragment)
