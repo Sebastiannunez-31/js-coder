@@ -12,6 +12,12 @@ let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
+
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+        
+    }
 })
 
 cards.addEventListener('click', e => {
@@ -19,6 +25,10 @@ cards.addEventListener('click', e => {
     addCarrito(e)
 
     //*intentar aqui la notificacion de la libreria para confirmacion en el carrito
+})
+
+items.addEventListener('click', e => {
+    btnAccion(e)
 })
 
 const fetchData = async () => {
@@ -79,7 +89,7 @@ const setCarrito = objeto => {
 
     }
 
-    carrito[producto.id] = { ...producto }//*spread operations - buscar mas informacion 
+    carrito[producto.id] = { ...producto }//*spread operations 
     //* se accede a la informacion de carrito y se copia
 
 
@@ -128,19 +138,23 @@ const pintarCarrito = () => {
 
     pintarCanvas()
 
+    localStorage.setItem('carrito',JSON.stringify(carrito))//* set carrito en el localStorage
+
 }
 
 const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad y el detalle de este
 
     footer.innerHTML = ''
 
-    if (Object.keys(carrito).length === 0) {
+    if (Object.keys(carrito).length === 0) {//*indica si el carrito esta vacio 
         footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+
+        return
 
     }
 
-    const totalQuantity = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
-    const totalPrice = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
+    const totalQuantity = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)//*suma la cantidad de productos
+    const totalPrice = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)//*suma la cantidad y el precio total del producto
 
     templateCanvas.querySelectorAll('td')[0].textContent = totalQuantity
     templateCanvas.querySelector('span').textContent = totalPrice
@@ -149,4 +163,38 @@ const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad 
 
     fragment.appendChild(clone)
     footer.appendChild(fragment)
+
+    const btnVaciar = document.getElementById('vaciar-carrito')
+    btnVaciar.addEventListener('click', () => {
+
+        carrito = {}
+        pintarCarrito()
+    })
+}
+//*accion de los botones
+const btnAccion = e => {/* 
+    console.log(carrito[e.target.dataset.id]) */
+    if (e.target.classList.contains('btn-info')) {//*aumentar cantidad
+
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad ++
+        carrito[e.target.dataset.id]= {...producto}
+
+        pintarCarrito()
+    }
+
+    if (e.target.classList.contains('btn-danger')){//*dismunuir cantidad
+
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad --
+        carrito[e.target.dataset.id]= {...producto}
+
+        if (producto.cantidad===0) {
+            delete carrito[e.target.dataset.id]
+        }
+        pintarCarrito()
+      
+    }
+
+    e.stopPropagation()
 }
