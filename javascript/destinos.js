@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
-        
+
     }
 })
 
@@ -125,7 +125,9 @@ const pintarCarrito = () => {
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-warning').dataset.id =producto.id
         templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+
 
         const clone = templateCarrito.cloneNode(true)
 
@@ -138,16 +140,17 @@ const pintarCarrito = () => {
 
     pintarCanvas()
 
-    localStorage.setItem('carrito',JSON.stringify(carrito))//* set carrito en el localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito))//* set carrito en el localStorage
 
 }
+
 
 const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad y el detalle de este
 
     footer.innerHTML = ''
 
     if (Object.keys(carrito).length === 0) {//*indica si el carrito esta vacio 
-        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - Compra y disfruta tu destino</th>`
 
         return
 
@@ -157,7 +160,8 @@ const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad 
     const totalPrice = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)//*suma la cantidad y el precio total del producto
 
     templateCanvas.querySelectorAll('td')[0].textContent = totalQuantity
-    templateCanvas.querySelector('span').textContent = totalPrice
+    templateCanvas.querySelector('span').textContent = totalPrice/* 
+    templateCanvas.querySelector('p').textContent = innerHTML = `Carrito vacío`  */
 
     const clone = templateCanvas.cloneNode(true)
 
@@ -165,11 +169,14 @@ const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad 
     footer.appendChild(fragment)
 
     const btnVaciar = document.getElementById('vaciar-carrito')
+    
     btnVaciar.addEventListener('click', () => {
-
+        
         carrito = {}
         pintarCarrito()
+        
     })
+    
 }
 //*accion de los botones
 const btnAccion = e => {/* 
@@ -177,24 +184,33 @@ const btnAccion = e => {/*
     if (e.target.classList.contains('btn-info')) {//*aumentar cantidad
 
         const producto = carrito[e.target.dataset.id]
-        producto.cantidad ++
-        carrito[e.target.dataset.id]= {...producto}
+        producto.cantidad++
+        carrito[e.target.dataset.id] = { ...producto }
 
         pintarCarrito()
     }
 
-    if (e.target.classList.contains('btn-danger')){//*dismunuir cantidad
+    if (e.target.classList.contains('btn-danger')) {//*dismunuir cantidad
 
         const producto = carrito[e.target.dataset.id]
-        producto.cantidad --
-        carrito[e.target.dataset.id]= {...producto}
+        producto.cantidad--
+        carrito[e.target.dataset.id] = { ...producto }
 
-        if (producto.cantidad===0) {
+        if (producto.cantidad === 0) {
             delete carrito[e.target.dataset.id]
         }
         pintarCarrito()
-      
+
+    }
+
+    if (e.target.classList.contains('btn-warning')) {
+        delete carrito[e.target.dataset.id]
+        pintarCarrito()
     }
 
     e.stopPropagation()
 }
+
+
+
+

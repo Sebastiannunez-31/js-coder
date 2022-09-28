@@ -1,113 +1,70 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
-
-    background-color: bisque !important;
-
-    background-size: cover;
-}
+  background-color: bisque !important;
+  background-size: cover; }
 
 header .navbar {
-
-    background-color: transparent !important;
-
-
-}
+  background-color: transparent !important; }
 
 .navbar-brand {
-
-    font-family: 'Lobster', cursive;
-    color: tomato !important;
-    text-decoration: none;
-
-
-}
-
-
-
+  font-family: 'Lobster', cursive;
+  color: tomato !important;
+  text-decoration: none; }
 
 ul .nav-link {
-
-
-    color: tomato;
-    font-family: 'Lobster', cursive;
-}
-
+  color: tomato;
+  font-family: 'Lobster', cursive; }
 
 .active a:hover {
-
-    color: #05d7b4;
-
-}
-
-
+  color: #05d7b4; }
 
 h1 {
-    color: tomato;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-
-}
+  color: tomato;
+  text-align: center;
+  font-family: 'Lobster', cursive; }
 
 div .__boton {
-    font-family: 'Lobster', cursive;
-}
+  font-family: 'Lobster', cursive; }
 
 footer {
-
-    background-color: rgb(157, 26, 3);
-
-
-}
+  background-color: #9d1a03; }
 
 footer div h5 {
-    font-family: 'Lobster', cursive;
-    color: tomato;
-}
+  font-family: 'Lobster', cursive;
+  color: tomato; }
 
 p {
-    color: tomato;
-    font-family: 'Lobster', cursive;
-}
+  color: tomato;
+  font-family: 'Lobster', cursive; }
 
 li a {
-    text-decoration: none;
-    font-family: 'Lobster', cursive;
-}
-
-
-
+  text-decoration: none;
+  font-family: 'Lobster', cursive; }
 
 .card .card-img-top {
-    object-fit: fill;
-
-    height: 200px;
-}
-
+  object-fit: fill;
+  height: 200px; }
 
 .card h4 {
-    font-size: 18px;
-}
+  font-size: 18px; }
 
 .card .card-body h5 {
-    font-family: 'Lobster', cursive;
-    color: #030100;
-}
+  font-family: 'Lobster', cursive;
+  color: #030100; }
 
 .card div {
-    text-align: center;
-}
+  text-align: center; }
 
 .card div .boton {
-    text-align: center;
-}
+  text-align: center; }
 
 .card div p {
-    font-family: 'Lobster', cursive;
-}
+  font-family: 'Lobster', cursive; }
+
+.__carrusel {
+  width: 100%;
+  height: 450px; }
