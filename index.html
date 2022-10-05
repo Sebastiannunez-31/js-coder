@@ -85,10 +85,26 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-      <div>
-        Carrito de compras por terminar
-
-      </div>
+   
+    <div class=" container">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+              </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+              <tr id="footerCarrito">
+                  <th scope="row" colspan="6">Carrito vacío - Elige tu viaje y a disfrutar</th>
+              </tr>
+          </tfoot>
+      </table>
+  </div>
      
   </div>
 </div>

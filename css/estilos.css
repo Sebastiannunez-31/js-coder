@@ -68,3 +68,6 @@ li a {
 .__carrusel {
   width: 100%;
   height: 450px; }
+
+tr btn ._eliminar {
+  font-family: 'Lobster', cursive; }

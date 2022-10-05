@@ -24,7 +24,7 @@ cards.addEventListener('click', e => {
 
     addCarrito(e)
 
-    //*intentar aqui la notificacion de la libreria para confirmacion en el carrito
+   
 })
 
 items.addEventListener('click', e => {
@@ -203,7 +203,8 @@ const btnAccion = e => {/*
 
     }
 
-    if (e.target.classList.contains('btn-warning')) {
+    if (e.target.classList.contains('_eliminar')) {//*eliminar del carrito
+
         delete carrito[e.target.dataset.id]
         pintarCarrito()
     }

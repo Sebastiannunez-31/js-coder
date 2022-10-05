@@ -3,10 +3,10 @@
       "precio": 1099230,
       "id": 1,
       "title": "Noruega",
-      "url": "https://picsum.photos/id/1018/3914/2935.jpg/"
+      "url": "../../assets/img/plaza.png"
     },
     {
-      "precio": 2650990,
+      "precio": 265000,
       "id": 2,
       "title": "Nueva York",
       "url": "https://picsum.photos/id/1029/4887/2759.jpg"
