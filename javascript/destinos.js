@@ -24,7 +24,7 @@ cards.addEventListener('click', e => {
 
     addCarrito(e)
 
-   
+
 })
 
 items.addEventListener('click', e => {
@@ -125,7 +125,7 @@ const pintarCarrito = () => {
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
-        templateCarrito.querySelector('.btn-warning').dataset.id =producto.id
+        templateCarrito.querySelector('.btn-warning').dataset.id = producto.id
         templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
 
 
@@ -169,14 +169,40 @@ const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad 
     footer.appendChild(fragment)
 
     const btnVaciar = document.getElementById('vaciar-carrito')
-    
+
     btnVaciar.addEventListener('click', () => {
-        
+
         carrito = {}
         pintarCarrito()
-        
+
     })
-    
+
+    const pagarCarrito = document.getElementById('pagar-carrito')
+
+    pagarCarrito.addEventListener('click', () => {
+
+
+        Swal.fire({
+            title: 'Deseas pagar este destino?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, deseo pagarlo !'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Pagado!',
+                    'Tu destino ha sido pagado',
+                    'success'
+                )
+            }
+
+
+        })
+
+    })
+
 }
 //*accion de los botones
 const btnAccion = e => {/* 
