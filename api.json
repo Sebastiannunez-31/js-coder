@@ -2,37 +2,37 @@
     {
       "precio": 1099230,
       "id": 1,
-      "title": "Noruega",
+      "title": "Plaza Roja",
       "url": "../../assets/img/plaza.png"
     },
     {
       "precio": 265000,
       "id": 2,
-      "title": "Nueva York",
+      "title": "Perú",
       "url": "../../assets/img/peru.jpg"
     },
     {
-      "precio": 100,
+      "precio": 990990,
       "id": 3,
-      "title": "Canada",
+      "title": "Mexico",
       "url": "../../assets/img/mexico.jpg"
     },
     {
-      "precio": 50,
+      "precio": 640000,
       "id": 4,
-      "title": "Estados Unidos",
+      "title": "Brasil",
       "url": "../../assets/img/Brasil.jpg"
     },
     {
-      "precio": 10,
+      "precio": 1080990,
       "id": 5,
-      "title": "Islandia",
+      "title": "Canada",
       "url": "../../assets/img/canada.jpg"
     },
     {
-      "precio": 150,
+      "precio": 1990999,
       "id": 6,
-      "title": "Francia",
+      "title": "Noruega",
       "url": "../../assets/img/Zeland.webp"
     }
   ]

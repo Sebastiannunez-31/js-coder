@@ -15,6 +15,14 @@ header .navbar {
   color: tomato !important;
   text-decoration: none; }
 
+h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center; }
+
+div .card h3 {
+  font-family: 'Lobster', cursive;
+  color: #2b8408 !important; }
+
 ul .nav-link {
   color: tomato;
   font-family: 'Lobster', cursive; }

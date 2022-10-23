@@ -44,9 +44,14 @@ const fetchData = async () => {
     }
 }
 
+
 const pintarCards = data => {
 
+
+
+
     data.forEach(item => {
+
         templateCard.querySelector('h5').textContent = item.title
         templateCard.querySelector('p').textContent = item.precio
         templateCard.querySelector('img').setAttribute("src", item.url);
@@ -56,8 +61,9 @@ const pintarCards = data => {
     });
 
     cards.appendChild(fragment);
-
 }
+
+
 
 
 
@@ -97,7 +103,7 @@ const setCarrito = objeto => {
         toast: true,
         position: 'top-start',
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -109,7 +115,14 @@ const setCarrito = objeto => {
         icon: 'success',
         title: `Has agregado ${producto.tittle} al carrito`
     })
+
     pintarCarrito()
+
+    
+const contadorCarrito = document.getElementById('contador-carrito')
+contadorCarrito.innerText = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
+console.log(carrito);
+
 
 
 }
@@ -194,16 +207,27 @@ const pintarCanvas = () => {//* pinta el producto en el carrito con la cantidad 
                 Swal.fire(
                     'Pagado!',
                     'Tu destino ha sido pagado',
-                    'success'
-                )
-            }
+                    'success',
 
+                )
+
+            }
+            carrito = {}
+            pintarCarrito()
 
         })
 
+
+
+
+
     })
 
+
+
+
 }
+
 //*accion de los botones
 const btnAccion = e => {/* 
     console.log(carrito[e.target.dataset.id]) */
@@ -235,9 +259,22 @@ const btnAccion = e => {/*
         pintarCarrito()
     }
 
+    
+    
     e.stopPropagation()
+
+
+
 }
 
+const contador= document.getElementById('contador-carrito')
+if (Object.keys(carrito).length === 0) {//*indica si el carrito esta vacio 
+contador.innerHTML=`0`
 
+
+
+
+
+}
 
 
